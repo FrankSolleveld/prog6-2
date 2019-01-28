@@ -9,19 +9,19 @@ import VueRouter from 'vue-router'
 let AppLayout = require('./components/App.vue')
 
 // Show list items template 
-const Listitems = Vue.component('Listitems', require ('./components/Listitems.vue'))
+const Listitems = Vue.component('Listitems', require ('./components/Listitems.vue').default)
 
 // Add item template
-const Additem = Vue.component('Additem', require ('./components/Additem.vue'))
+const Additem = Vue.component('Additem', require ('./components/Additem.vue').default)
 
 // Edit item template
-const Edititem = Vue.component('Edititem', require ('./components/Edititem.vue'))
+const Edititem = Vue.component('Edititem', require ('./components/Edititem.vue').default)
 
 // Delete item template
-const Deleteitem = Vue.component('Deleteitem', require ('./components/Deleteitem.vue'))
+const Deleteitem = Vue.component('Deleteitem', require ('./components/Deleteitem.vue').default)
 
 // View single item template
-const Viewitem = Vue.component('Viewitem', require ('./components/Viewitem.vue'))
+const Viewitem = Vue.component('Viewitem', require ('./components/Viewitem.vue').default)
 
 Vue.use(VueAxios, axios)
 Vue.use(VueRouter)

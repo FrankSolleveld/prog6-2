@@ -4,9 +4,7 @@
         <router-link class="btn btn-xs btn-primary">
             <span class="glyphicon glyphicon-plus"></span>Add new Movie
         </router-link>
-      <!-- <ul class="list-group">
-        <li v-for="item in items" :key="item._id" class="list-group-item">{{ item.name }}</li>
-      </ul> -->
+      
     </div><br><br>
 
     <table class="table table-bordered">
@@ -27,14 +25,15 @@
                 <td> {{ item.category}} </td>
                 <td> {{ item.price }}</td>
                 <td>
-                    <router-link class="btn btn-info btn-xs" v-bind:to="{name: 'Viewitem', params: {id:post._id}}">Show</router-link>
-                    <router-link class="btn btn-warning btn-xs" v-bind:to="{name: 'Edititem', params: {id:post._id}}">Edit</router-link>
-                    <router-link class="btn btn-danger btn-xs" v-bind:to="{name: 'Deleteitem', params: {id:post._id}}">Delete</router-link>
+                    <router-link class="btn btn-info btn-xs" v-bind:to="{name: 'Viewitem', params: {id:item._id}}">Show</router-link>
+                    <router-link class="btn btn-warning btn-xs" v-bind:to="{name: 'Edititem', params: {id:item._id}}">Edit</router-link>
+                    <router-link class="btn btn-danger btn-xs" v-bind:to="{name: 'Deleteitem', params: {id:item._id}}">Delete</router-link>
                 </td>
             </tr>
         </tbody>
-
+    
     </table>
+  
   </div>
 </template>
 
