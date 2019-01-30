@@ -40,14 +40,27 @@ export default {
             }
         }
     },
-    methods: {
-        createItem: function() {
+    created:function() {
+            let uri = 'http://localhost:8080/products/'
+            let id = this.$route.params.id
+
+            axios.get(uri + id).then((response) => {
+                console.log(response)
+                this.item = response.data
+            })
+            .catch(function (error){
+                console.log(error)
+            })
+    },
+
+    methods:{
+        editItem: function () {
             let uri = 'http://localhost:8080/products/'
             let id = this.$route.params.id
 
             axios.put(uri + id, this.item).then((response) => {
                 console.log(response)
-                this.$router.push({name:'Listitems'})
+                this.$router.push({name: 'Listitems'})
             })
             .catch(function (error){
                 console.log(error)
