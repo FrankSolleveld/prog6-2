@@ -36,7 +36,7 @@ export default {
             item: {
                 name: '', 
                 category: '', 
-                price: '',
+                price: ''
             }
         }
     },
