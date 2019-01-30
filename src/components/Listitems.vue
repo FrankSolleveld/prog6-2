@@ -1,7 +1,7 @@
 <template id="item-list">
   <div class="row">
     <div class="pull-right">
-        <router-link class="btn btn-xs btn-primary">
+        <router-link class="btn btn-xs btn-primary" v-bind:to="{path:'/add'}">
             <span class="glyphicon glyphicon-plus"></span>Add new Movie
         </router-link>
       
@@ -13,7 +13,7 @@
             <tr>
                 <th>#</th>
                 <th>Title</th>
-                <th>Category</th>
+                <th>Category</th> 
                 <th>Price</th>
                 <th class="col-md-2">Actions</th>
             </tr>
