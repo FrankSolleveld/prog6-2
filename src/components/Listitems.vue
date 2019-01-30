@@ -1,5 +1,5 @@
 <template id="item-list">
-  <div class="row">
+  <div class="row container">
     <div class="pull-right">
         <router-link class="btn btn-xs btn-primary" v-bind:to="{path:'/add'}">
             <span class="glyphicon glyphicon-plus"></span>Add new Movie
@@ -7,7 +7,7 @@
       
     </div><br><br>
 
-    <table class="table table-bordered">
+    <table class="table table-bordered col-md-12">
 
         <thead>
             <tr>
@@ -15,7 +15,7 @@
                 <th>Title</th>
                 <th>Category</th> 
                 <th>Price</th>
-                <th class="col-md-2">Actions</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -67,5 +67,16 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.pull-right {
+  top:25px;
+  position: relative;
+  align-content: center;
+}
+
+table {
+  top: 50px;
+  position: relative;
 }
 </style>
